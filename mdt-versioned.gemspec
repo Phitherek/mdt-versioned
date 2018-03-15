@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/Phitherek/mdt-versioned'
   s.license = 'MIT'
   s.extra_rdoc_files = ['README.md']
-  s.rdoc_options << '--title' << 'MDT Simple module' << '--main' << 'README.md' << '--line-numbers'
+  s.rdoc_options << '--title' << 'MDT Versioned module' << '--main' << 'README.md' << '--line-numbers'
   s.metadata = {
       'documentation_uri' => 'http://www.rubydoc.info/github/Phitherek/mdt-versioned',
       'source_code_uri' => 'https://github.com/Phitherek/mdt-versioned'
