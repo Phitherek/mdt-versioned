@@ -1,16 +1,33 @@
 require 'mdt-core'
 require 'fileutils'
 module MDT
+  # A module containing all commands
   module Commands
+    # A class that implements commands for versioned releases flow
     class Versioned < MDT::Commands::Base
+      # A method that defines a key for commands class.
+      # Returns:
+      # * "versioned"
       def self.key
         'versioned'
       end
 
+      # A method that defines keys for available commands.
+      # Returns:
+      # * +["link_current", "link_shared", "cleanup"]+
       def self.subkeys
         ['link_current', 'link_shared', 'cleanup']
       end
 
+      # A method that defines how to execute a command and how to apply command modifiers.
+      # Arguments:
+      # * +key+ - a key identifier of a particular command
+      # * +modifiers+ - an array of command modifier configurations - each configuration is a Hash that includes modifier type and modifier options
+      # * +options+ - options for command as a Hash
+      # Returns:
+      # * Exit code of command +key+
+      # More information:
+      # * See README.md for detailed description of commands
       def execute(key, modifiers = [], options = {})
         case key
         when 'link_current'
