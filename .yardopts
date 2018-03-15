@@ -1,0 +1,4 @@
+--readme README.md
+--title 'MDT Simple Documentation'
+--charset utf-8
+'lib/**/*.rb' - '*.md'
